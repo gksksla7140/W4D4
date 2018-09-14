@@ -1,0 +1,22 @@
+<section class="cat-index-holder">
+  <%= auth_token %>
+  <nav>
+    <h1>ALL OF THE CATS IN THE WORLD</h1>
+    <a href="<%= new_cat_url %>">
+      Add Cat
+
+    </a>
+  </nav>
+  <section class="cat-index">
+    <% if @cat %>
+    <% @cat.each do |cat| %>
+      <div class="cat-index-item">
+        <div>
+          <img src="http://placekitten.com/g/231/231" >
+          <br /><a href="<%= cat_url(cat) %>">Rent <%= cat.name %></a>
+        </div>
+      </div>
+    <% end %>
+    <% end  %>
+  </section>
+</section>

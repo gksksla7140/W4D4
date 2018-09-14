@@ -1,0 +1,23 @@
+<h1>Log In </h1>
+<form class="" action="<%= session_url %>" method="post">
+  <%= auth_token %>
+  <% if flash.now[:errors] %>
+  <% flash.now[:errors].each do |error| %>
+  <li> <%=error %></li>
+  <% end  %>
+  <% end  %>
+
+  <label for="new_email">Email:</label>
+  <input type="email" name="user[email]" id='new_email'>
+  <br>
+  <br>
+  <label for="new-password">Password</label>
+  <input type="password" name="user[password]" id= 'new-password'>
+  <br>
+  <br>
+  <input type="submit" name="submit" value='Log In'>
+
+
+
+
+</form>
